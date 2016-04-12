@@ -19,7 +19,7 @@ var task =  function(request, callback){
 		else     {
 			callback(null, data);
 		}     // successful response
-	)
+	);
 
 }
 exports.lab = task
