@@ -35,5 +35,5 @@
 		
 		
 	}
-
+}
 	exports.lab = task
