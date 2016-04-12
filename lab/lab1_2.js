@@ -6,7 +6,7 @@ var params = {
 	  DryRun:  false,
 	  MaxResults: 5
 	};
-var ec2 = new AWS.EC2({region: 'us-east-1'});
+var ec2 = new AWS.EC2();
 ec2.describeInstances(params, function(err, data) {
 	  if (err) callback(null, err.stack); // an error occurred
 	  else     callback(null,data);           // successful response
