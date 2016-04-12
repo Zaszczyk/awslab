@@ -6,34 +6,21 @@
 	var task =  function(request, callback){
 
 		var params = {
-	  DryRun: true || false,
-	  Filters: [
-	    {
-	      /*Name: 'STRING_VALUE',
-	      Values: [
-	        'STRING_VALUE',
-	         more items 
-	      ]*/
-	    },
-	    /* more items */
-	  ],
-	  InstanceIds: [
-	   /* 'STRING_VALUE',
-	     more items */
-	  ],
+	  DryRun: false,
+
 	  MaxResults: 10,
-	  NextToken: 'STRING_VALUE'
 	};
+var ec2 = new AWS.EC2();
 
 		ec2.describeInstances(params, function(err, data) {
 		  if (err) {
-		  	console.log(err, err.stack)
+				callback(null, err.stack)
 		  }
 		  else     {
-		  console.log(data);      
+		  callback(null, data);
 		  }     // successful response
-		
-		
+
+
 	}
 }
 	exports.lab = task
