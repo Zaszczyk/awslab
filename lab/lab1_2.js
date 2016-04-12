@@ -1,4 +1,5 @@
 var AWS = require('aws-sdk');
+AWS.config.update({region:'us-west-2b'});
 var task =  function(request, callback){
 var params = {
 	  DryRun:  false,
