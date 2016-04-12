@@ -5,7 +5,7 @@ var hash = function(algorithm, text){
 	try {
 		var shasum = crypto.createHash(algorithm);
 		shasum.update(text);
-		digest = shasum.digest('hex'); 
+		digest = shasum.digest('hex');
 	}catch(e){
 		console.log(e);
 	}
